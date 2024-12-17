@@ -20,6 +20,13 @@ struct dd_pair {
 	Matrix<double, Dynamic, 1> density2;
 };
 
+struct edd_pair {
+	Matrix<double, Dynamic, 1> density1;
+	Matrix<double, Dynamic, 1> density2;
+	double                     energy_tot;
+	
+};
+
 struct eedd_pair {
 	Matrix<double, Dynamic, 1> density1;
 	Matrix<double, Dynamic, 1> density2;

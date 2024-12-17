@@ -25,6 +25,7 @@ private:
 
     int tkh_count = 0;
 	int counter   = 0;
+	int max_count = 0;
 
 
 	Matrix<double, 3, 1>                      tube_center;
@@ -56,11 +57,13 @@ public:
 
 	ed_pair extract_vecs(Matrix<double, Dynamic, 1> rho_vec, double fill_mu, double U);
 
-	dd_pair hubbard_iteration(double mu, dd_pair initial_density, double U);
+	edd_pair hubbard_iteration(double mu, dd_pair initial_density, double U);
 
 	void scan_over_filling(double U, int mu_granularity, std::string mode, bool reverse);
 
 	void scan_over_filling_and_U(double start_U, double end_U, int steps_U, int mu_granularity, std::string mode, bool reverse);
+
+	void scan_over_filling_and_U_E(double start_U, double end_U, int steps_U, int mu_granularity, std::string mode, bool reverse);
 
 };
 
